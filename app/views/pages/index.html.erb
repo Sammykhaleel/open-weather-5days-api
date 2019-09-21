@@ -1,3 +1,34 @@
 <h2 style="font-weight:bold; font-size:30px; padding-top:20px;" class="text-center">
   Current Weather for <%= @city_info_data['city']['name']%>,<%= @city_info_data['city']['country']%>
 </h2>
+
+<table class="table table-bordered">
+  <div class="text-center"></div>
+
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Weather</th>
+      <th scope="col">Cloud</th>
+      <th scope="col">Temperature</th>
+      <th scope="col">Humidity</th>
+      <th scope="col">Wind Speed</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div><% @list_data.each do |i|%></div>
+    <tr>
+      <td><%= i['dt_txt']%></td>
+      <td>
+        <img src='http://openweathermap.org/img/wn/<%= i['weather'][0]['icon']%>@2x.png'width="50" height="50"> <%=
+        i['weather'][0]['description']%>
+      </td>
+      <td><%= i['clouds']['all']%> %</td>
+      <td><%= i['main']['temp']%> &#8457;</td>
+      <td><%= i['main']['humidity']%>%</td>
+      <td><%= i['wind']['speed']%> miles/hour</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

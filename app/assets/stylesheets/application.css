@@ -57,3 +57,21 @@ body {
 .navbar-toggle {
   margin-right: 0px !important;
 }
+table {
+  color: #333333;
+  font-family: Helvetical, Arial, sans-serif;
+}
+
+th {
+  background: #4aa1f3;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+td {
+  padding: 2px !important;
+  background: #fafafa;
+  text-align: center;
+  font-size: 18px;
+}
