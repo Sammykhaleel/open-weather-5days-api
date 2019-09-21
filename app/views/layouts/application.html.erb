@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OpenWeatherApi</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <title>Weather App</title>
+    <%= csrf_meta_tags %> <%= csp_meta_tag %> <%= stylesheet_link_tag 'application', media: 'all',
+    'data-turbolinks-track': 'reload' %> <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
   </head>
 
   <body>
+  <nav class="navbar navbar-default" id="nav_bar">
+    <div class="navbar-header">
+      <a href="index.html" class="navbar-brand navbar-link weather">
+        <%= image_tag("logo.png",size: "80x80", class: "img-responsive",id: "logo", :alt => "rss feed") %>
+        <strong>Weather App</strong>
+      </a>
+      <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse text-right"" id="navcol">
+      <ul class="nav navbar-nav navbar-right" id="nav_list">
+        <li><a href="https://github.com/Sammykhaleel" target="_blank">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/sammy-khaleel-ba756a61/" target="_blank">Linkedin</a></li>
+        <li>
+          <a href="http://www.openweathermap.org" target="_blank">Open Weather Map</a>
+        </li>
+      </ul>
+    </div>
+</nav>
     <%= yield %>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"
+  ></script>
 </html>
