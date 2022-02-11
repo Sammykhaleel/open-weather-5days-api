@@ -13,7 +13,7 @@ end
 group :production do
   gem 'pg'
 end
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 5.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
